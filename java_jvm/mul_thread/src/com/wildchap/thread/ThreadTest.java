@@ -39,6 +39,15 @@ public class ThreadTest {
         MyThread2 myThread2 = new MyThread2();
         myThread.start();
         myThread2.start();
+
+        //创建Thread对象的匿名子类
+        new Thread(){
+            @Override
+            public void run() {
+                System.out.println("匿名子类方式创建线程");
+            }
+        }.start();
+
         System.out.println("hello");
     }
 
